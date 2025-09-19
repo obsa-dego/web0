@@ -34,7 +34,7 @@
 					</a>
 				{:else}
 					<span class="content-link disabled-link">
-						<span class="content-text">{item.name} (Coming Soon)</span>
+						<span class="content-text">{item.name}</span>
 					</span>
 				{/if}
 			</div>
