@@ -1,13 +1,13 @@
 <script>
 	let pageItems = [
-		'Page 1',
-		'Page 2',
-		'Page 3',
-		'Page 4',
-		'Page 5',
-		'Page 6',
-		'Page 7',
-		'Page 8'
+		{ name: 'Page 1', disabled: true },
+		{ name: 'Page 2', disabled: false },
+		{ name: 'Page 3', disabled: false },
+		{ name: 'Page 4', disabled: false },
+		{ name: 'Page 5', disabled: false },
+		{ name: 'Page 6', disabled: true },
+		{ name: 'Page 7', disabled: false },
+		{ name: 'Page 8', disabled: false }
 	];
 </script>
 
@@ -26,11 +26,17 @@
 
 	<div class="content-section">
 		{#each pageItems as item, index}
-			<div class="content-item">
+			<div class="content-item {item.disabled ? 'disabled' : ''}">
 				<span class="content-number">[{index + 1}]</span>
-				<a href="/knight-view/{index + 1}" class="content-link">
-					<span class="content-text">{item}</span>
-				</a>
+				{#if !item.disabled}
+					<a href="/knight-view/{index + 1}" class="content-link">
+						<span class="content-text">{item.name}</span>
+					</a>
+				{:else}
+					<span class="content-link disabled-link">
+						<span class="content-text">{item.name} (Coming Soon)</span>
+					</span>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -127,6 +133,30 @@
 
 	.content-item:hover .content-number {
 		color: #999;
+	}
+
+	.content-item.disabled {
+		opacity: 0.3;
+		cursor: not-allowed;
+	}
+
+	.content-item.disabled:hover {
+		background: #000;
+		border-color: #222;
+	}
+
+	.content-item.disabled .content-text {
+		color: #666;
+	}
+
+	.content-item.disabled:hover .content-text {
+		color: #666;
+	}
+
+	.disabled-link {
+		cursor: not-allowed;
+		flex: 1;
+		display: block;
 	}
 
 	.back-section {
