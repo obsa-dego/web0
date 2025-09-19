@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Rain App</title>
+	<title>isopng</title>
 </svelte:head>
 
 <div class="page">

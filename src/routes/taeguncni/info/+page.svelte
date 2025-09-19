@@ -94,7 +94,7 @@
 </script>
 
 <svelte:head>
-	<title>taeguncni info - Rain App</title>
+	<title>taeguncni info - isopng</title>
 </svelte:head>
 
 <div class="page">

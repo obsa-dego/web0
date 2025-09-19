@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>taeguncni v0.2 - Rain App</title>
+	<title>taeguncni v0.2 - isopng</title>
 </svelte:head>
 
 <div class="page">

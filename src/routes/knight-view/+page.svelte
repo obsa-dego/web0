@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>Knight View - Rain App</title>
+	<title>Knight View - isopng</title>
 </svelte:head>
 
 <div class="page">
