@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Courier New', monospace;
+	background: #000;
+	color: #fff;
+	min-height: 100vh;
+	line-height: 1.4;
+}
+
+/* 미니멀 컨테이너 */
+.minimal-container {
+	border: 1px solid #333;
+	background: #000;
+}
+
+.minimal-item {
+	border: 1px solid #222;
+	background: #000;
+	color: #fff;
+}
+
+.minimal-item:hover {
+	background: #111;
+	color: #ff0000;
+}
+
+/* 텍스트 스타일 */
+.text-white {
+	color: #fff;
+}
+
+.text-red {
+	color: #ff0000;
+}
+
+/* 기본 리셋 */
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
